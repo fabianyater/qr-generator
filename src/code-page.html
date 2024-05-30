@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="shared-styles.css">
+  <link rel="stylesheet" href="code-styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <title>Code QR</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="/src/index.html" title="QRCODE">
+      <img src="../assets/logo-qr-generator.svg" alt="QRCODE Generator logo">
+    </a>
+  </header>
+  <main class="main">
+    <section class="container">
+      <div class="qr-container">
+        <div class="code" id="generated-code"></div>
+      </div>
+      <div class="options">
+        <button class="btn" type="button" title="Download" id="download-btn">Download
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+            <path d="M7 11l5 5l5 -5" />
+            <path d="M12 4l0 12" />
+          </svg>
+        </button>
+        <button class="btn" type="button" title="Share" id="share-btn">
+          <span id="share-span">Share</span>
+          <span id="success-copy"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-share-2">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M8 9h-1a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-8a2 2 0 0 0 -2 -2h-1" />
+            <path d="M12 14v-11" />
+            <path d="M9 6l3 -3l3 3" />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="get-qr.js"></script>
+</body>
+
+</html>
